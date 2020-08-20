@@ -1,9 +1,7 @@
 # Deepfake Detection
 
 ## Abstract
-
 Deepfake is a technique that can superimpose face images of a target person to a video of a source person to create a video of the target person doing or saying things the source person does. Deepfakes use deep learning technology, a branch of machine learning that applies neural net simulation to massive data sets, to create a fake. Deep learning has been successfully applied to solve various complex problems ranging from big data analytics to computer vision and human-level control. Deep learning advances however have also been employed to create software that can cause threats to privacy, democracy and national security. One feature of Deep neural network is Auto Encoders, which is basically used for image reduction. Usually, the autoencoder extracts latent features of face images and the decoder is used to reconstruct the face images. A deepfake creation model using two encoder-decoder pairs. Two networks use the same encoder but different decoders for training process . An image of face A is encoded with the common encoder and decoded with decoder B to create a deepfake. Now that we know a Brief, In our project we would detecting deepfakes of various forms namely, Facial manipulation, Synthesis and Attribute Manipulation. Current facial manipulation methods can be separated into two categories: facial expression manipulation and facial identity manipulation. And the above methods would be perfomed on a dataset that contains a hidden test set as well as a database of over 1.8 million manipulated images. We show that the use of additional domain specific knowledge improves the detection to an expected accuracy, even in the presence of strong compression, and clearly outperforms human observers.
- 
 
 ## Introduction
 
@@ -60,5 +58,6 @@ We can further modify the architecture of the model by tuning the hyperparameter
 2. Akshita, Neha: Feature extraction from the image
 3. Saran: Feature engineering using prediction of importance
 4. Bevin: Face extraction
-5. Task of modeling is distributed among all the collaborators
+5. Task of modeling will be distributed among all the collaborators
+6. Aditya: Project Manager
 
