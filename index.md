@@ -24,17 +24,17 @@ Although, most deepfakes are created for harmless fun or artistic works. There i
 
 ## Method 
 
-## 1 Exploratory Analysis (EDA)
+## 1. Exploratory Analysis (EDA)
 
 In order to detect deepfake images it is imperative that we understand how these images are created. Analyzing the working and techniques behind the generation of these images will help in effectively distinguishing fake images from real. DeepFake is created using generative models in deep learning to manipulate the original images to change certain attributes in the image that can make the resultant image misleading. The features can also be tweaked to such an extent that an unrecognizable fake image is created. Autoencoder is an unsupervised artificial neural network that is trained to reconstruct data as close to the original from the encoded compressed data. It consists of two main parts, an encoder that compresses the input data into an encoded format and a decoder that reconstructs data from the encoded representation. Some of its applications include anomaly detection, image denoising, image retrieval. Generative models are a very important application of Autoencoders that we will be using.
 
 Generative Adversarial Networks or GAN, as the name suggests is a member of the generative models that discovers patterns in input data and generates new data instances resembling the original data. GAN uses two competing neural networks - generator and discriminator, to create new images (fake images of non-existent people) with realistic features which cannot be easily recognized by the human eye. The generator is trained to produce an output that the discriminator cannot distinguish from the real, while the discriminator keeps learning to distinguish true data from the generated output. As a result of the two components trying to outdo each other, we obtain near-real fake images. In the exploratory analysis, we will carry out an in-depth study of the working of autoencoders, more specifically GANs in creating deepfake images so that we can potentially reverse engineer discerning features and train our model accordingly.
 
-## 2.1 Feature Engineering 
+## 2.1. Feature Engineering 
 
 Engineering features is an important part of making a model better at detecting fake images. Not all features of an image will necessary contribute meaningful information to the model. For this reason we have to separate those features that are "good" from those which are not. The first part of this process is extracting features, which will be discussed shortly. In essence it is the name for methods that select and /or combine variables into features, effectively reducing the amount of data that must be processed, while still accurately and completely describing the original data set. We take this to a step further. As a next step we classify the extracted features so that we can determine which classes of features are good for our use. For this we do prediction using selected classes of features and compare the outomes. After we have ascertained feature importance, we can use the result to select features from our training images to train our model. In fact we can combine these with other inputs which we give to our neural network model.
 
-## 2.2 Feature Extraction
+## 2.2. Feature Extraction
 
 There are many algorithms for feature extraction, most popular of them are SURF, ORB, SIFT, BRIEF. Most of these algorithms based on image gradient. The method that we would be using for our project is: ORB. This is a one shot facial recognition algorithm. ORB is preferred over most Algorithms and it is said to be a more efficient algorithm compared to as compared to SIFT and SURF. ORB is widely used due to its ability of being rotational and scale invariant. Also ORB being not patented also makes it feasible for our project.
 
@@ -44,11 +44,11 @@ ORB is considered to be more accurate than SURF(uses 16 pixels) and other algori
 
 In ORB we also use sub sampling where every image is down sampled and up sampled accordingly. As mentioned earlier it is rotational and scale invariant, and the algorithm is computationally inexpensive. For image extraction features, it is more stable and has higher anti-interference. We’ll then use a more efficient algorithm to eliminate the effects of extraneous features and further improve the matching speed.
 
-## 2.3 Face Extraction
+## 2.3. Face Extraction
 
 Faces are important features we want to use for our detection of deepfake since most of the deepfakes are made by modifying or switching faces. Face Extraction is one method among many methods for processing images. At first, Face detection is performed using a classifier which is trained on an image dataset consisting of thousands of images with and without faces. The classifier uses the concept of Haar Cascade which is an object detection method used to locate an object of interest in images. The algorithm is trained on a large number of positive and negative samples. Here, the positive samples are those images with faces present and the negative samples are those images without faces present. Once trained, the classifier can then be able to locate the presence of a face(s) for a given image. Once the faces are detected, they are then extracted and saved locally for further analysis.
 
-## 3 Modeling 
+## 3. Modeling 
 
 Everything leads up to modeling, where we build a deep neural netwrok model which is made with a consideration for all the information we obtained from EDA and uses features we engineered. The model contains convolutional neural network (CNN) layers which, by training, essentially learns to extract information that will contribute to the detection of the image being fake. After the CNN, the inputs will be passed through a fully connected layer (or multiple layers of this sort, depending on the architecture) which gives an estimate of the probability of the image being deepfake.
 
