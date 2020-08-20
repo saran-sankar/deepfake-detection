@@ -54,7 +54,7 @@ Everything leads up to modeling, where we build a deep neural netwrok model whic
 
 We can further modify the architecture of the model by tuning the hyperparameters, with a consideration for both accuracy and computaional complexity, to find the best model architecture which suits our need. Some things we can do are to add dropout layers, change the number of nodes in the layers, change the number of layers, change the learning rate of the model, and to try different optimizers. Neural networks provide us with a vast set of modeling possibilities. We can also experiment with different set of features (see 2.1) to perfect our detection.
 
-# Roles of collaborators
+## Roles of collaborators
 
 1. Aditya, Lalita: Exploratory data analysis
 2. Akshita, Neha: Feature extraction from the image
