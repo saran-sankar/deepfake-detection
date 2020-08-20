@@ -56,9 +56,9 @@ We can further modify the architecture of the model by tuning the hyperparameter
 
 # Roles of collaborators
 
-1. Aditya, Lalita: EDA
-2. Akshita, Neha: Feature extraction
-3. Saran: Feature engineering
+1. Aditya, Lalita: Exploratory data analysis
+2. Akshita, Neha: Feature extraction from the image
+3. Saran: Feature engineering using prediction of importance
 4. Bevin: Face extraction
 5. Task of modeling is distributed among all the colaborators
 
