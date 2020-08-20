@@ -53,3 +53,12 @@ Faces are important features we want to use for our detection of deepfake since 
 Everything leads up to modeling, where we build a deep neural netwrok model which is made with a consideration for all the information we obtained from EDA and uses features we engineered. The model contains convolutional neural network (CNN) layers which, by training, essentially learns to extract information that will contribute to the detection of the image being fake. After the CNN, the inputs will be passed through a fully connected layer (or multiple layers of this sort, depending on the architecture) which gives an estimate of the probability of the image being deepfake.
 
 We can further modify the architecture of the model by tuning the hyperparameters, with a consideration for both accuracy and computaional complexity, to find the best model architecture which suits our need. Some things we can do are to add dropout layers, change the number of nodes in the layers, change the number of layers, change the learning rate of the model, and to try different optimizers. Neural networks provide us with a vast set of modeling possibilities. We can also experiment with different set of features (see 2.1) to perfect our detection.
+
+# Roles of collaborators
+
+1. Aditya, Lalita: EDA
+2. Akshita, Neha: Feature extraction
+3. Saran: Feature engineering
+4. Bevin: Face extraction
+5. Task of modeling is distributed among all the colaborators
+
